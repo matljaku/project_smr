@@ -897,37 +897,37 @@ set bc 1 1 1 % all vacuum
 
 % --- Material data
 % u195 fuel
-mat u195 -10.412 tmp 700.0 burn 1
+mat u195 -10.412 tmp 700.0 burn 1 %mat_temp
 %{u195inputDataFuel}
 
 %div u195 sep 1 subr 2 0.0 0.405765  
 
 % u205 fuel
-mat u205 -10.412 tmp 700.0 burn 1
+mat u205 -10.412 tmp 700.0 burn 1 %mat_temp
 %{u205inputDataFuel}
 
 %div u205 sep 1 subr 1 0.0 0.405765 
 
 % u27 fuel
-mat u27 -10.412 tmp 700.0 burn 1
+mat u27 -10.412 tmp 700.0 burn 1 %mat_temp
 %{u270inputDataFuel}
 
 %div u27 sep 1 subr 1 0.0 0.405765 
 
 % u36 fuel
-mat u36 -10.412 tmp 700.0 burn 1
+mat u36 -10.412 tmp 700.0 burn 1 %mat_temp
 %{u360inputDataFuel}
 
 %div u36 sep 1 subr 1 0.0 0.405765 
 
 % g30 fuel
-mat g30 -10.322 tmp 700.0 vol 3308 burn 1
+mat g30 -10.322 tmp 700.0 vol 3308 burn 1 %mat_temp
 %{g30inputDataFuel}
 
 %div g30 sep 1 subr 1 0.0 0.405765 
 
 % g25 fuel
-mat g25 -10.322 tmp 700.0 vol 6617 burn 1
+mat g25 -10.322 tmp 700.0 vol 6617 burn 1 %mat_temp
 %{g25inputDataFuel}
 
 %div g25 sep 1 subr 1 0.0 0.405765 

@@ -904,7 +904,7 @@ set bc 1 1 1 % all vacuum
 
 % --- Material data
 % u195 fuel
-mat u195 -10.412 tmp 700.0 burn 1
+mat u195 -10.412 tmp 1200 burn 1 %mat_temp
 92234.12c	-9.55780E-05 
 92235.12c	-1.71888E-02 
 92236.12c	-7.90686E-05 
@@ -916,7 +916,7 @@ mat u195 -10.412 tmp 700.0 burn 1
 %div u195 sep 1 subr 2 0.0 0.405765  
 
 % u205 fuel
-mat u205 -10.412 tmp 700.0 burn 1
+mat u205 -10.412 tmp 1200 burn 1 %mat_temp
 92234.12c	-1.00901E-04 
 92235.12c	-1.80703E-02 
 92236.12c	-8.31234E-05 
@@ -928,7 +928,7 @@ mat u205 -10.412 tmp 700.0 burn 1
 %div u205 sep 1 subr 1 0.0 0.405765 
 
 % u27 fuel
-mat u27 -10.412 tmp 700.0 burn 1
+mat u27 -10.412 tmp 1200 burn 1 %mat_temp
 92234.12c	-1.35993E-04 
 92235.12c	-2.37999E-02 
 92236.12c	-1.09480E-04 
@@ -940,7 +940,7 @@ mat u27 -10.412 tmp 700.0 burn 1
 %div u27 sep 1 subr 1 0.0 0.405765 
 
 % u36 fuel
-mat u36 -10.412 tmp 700.0 burn 1
+mat u36 -10.412 tmp 1200 burn 1 %mat_temp
 92234.12c	-1.85743E-04 
 92235.12c	-3.17332E-02 
 92236.12c	-1.45973E-04 
@@ -952,7 +952,7 @@ mat u36 -10.412 tmp 700.0 burn 1
 %div u36 sep 1 subr 1 0.0 0.405765 
 
 % g30 fuel
-mat g30 -10.322 tmp 700.0 vol 3308 burn 1
+mat g30 -10.322 tmp 1200 vol 3308 burn 1 %mat_temp
 92234.12c	-6.97669E-05  
 92235.12c	-1.28255E-02  
 92236.12c	-5.89973E-05  
@@ -971,7 +971,7 @@ mat g30 -10.322 tmp 700.0 vol 3308 burn 1
 %div g30 sep 1 subr 1 0.0 0.405765 
 
 % g25 fuel
-mat g25 -10.322 tmp 700.0 vol 6617 burn 1
+mat g25 -10.322 tmp 1200 vol 6617 burn 1 %mat_temp
 92234.12c	-8.54458E-05  
 92235.12c	-1.54699E-02  
 92236.12c	-7.11618E-05  
