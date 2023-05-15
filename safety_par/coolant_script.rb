@@ -1,20 +1,13 @@
-require_relative "./isotopes.rb"
-temp = ["03c", "06c", "09c", "12c", "15c", "18c"]
-temp.each do |lib|
-    am_conc = [Mat_am002, Mat_am005, Mat_am008 ]
-    am_name = [2, 5, 8]
-    am_conc.each_with_index do |am, index|
-        main_name = "./inps/cool_00#{am_name[index]}_#{lib}"
-        File.open(main_name, "w") do |w|
-                File.foreach("./main") do |l|
-                    if l.include?("<<fuel>>")
-                        l = am
+temp = [531.4,  549.15, 566.9,  584.65, 602.4 ]
+dens = [0.7863534783823881, 0.7572792205367577, 0.7246729673316301, 0.6872745433494536, 0.6428672028575688]
+temp.each_with_index do |t, i|
+        main_name = "NuScaleModel_Coolant_#{i}"
+        File.open("./inps/#{main_name}", "w") do |w|
+                File.foreach("./01_MODEL") do |l|
+                    if l.include?("clear_water -0.75357 tmp 531.5")
+                        l = l.gsub("-0.75357", (-dens[i]).to_s).gsub("531.5", t.to_s)
                         w.puts l
-                    elsif l.include?("mat sodium -0.86  % Density of sodium 0.86")
-                        t = lib.split("c")[0].to_f*100.0
-                        puts t
-                        dens = (1012 - 0.2205*t - 1.923*(1e-5)*t**2 + 5.637*(1e-9)*t**3)*1e-3
-                        w.puts l.gsub("0.86", dens.to_s)
+        
                     else
                         w.puts l
                         
@@ -28,7 +21,7 @@ temp.each do |lib|
                 end
             
         end
-        system("sss2 #{main_name} -omp 5")
-        system("mv #{main_name}_res.m ./res/")
-    end
+        #system("sss2 ./inps/#{main_name} -omp 5")
+        #system("mv ./inps/#{main_name}_res.m ./res/")
+    
 end

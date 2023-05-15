@@ -1,0 +1,1241 @@
+% Model created on 2020 by Pavel Suk 
+% Model modified on 03/01/2022 by Pavel Suk 
+% Czech Technical University in Prague, Faculty of Nuclear Science and Physical Engineering, Department of Nuclear Reactors 
+% E.mail: pavel.suk@fjfi.cvut.cz
+
+%-------MODEL DESCRIPTION---------
+
+u195 enriched to 1.95
+u205 enriched to 2.05
+u270 enriched to 2.7
+u360 enriched to 3.6
+g30 enriched to 1.5 and 3.0 of Gd2O3
+g25 enriched to 1.8 and 2.5 of Gd2O3
+
+%-----------------------------
+set title "NuScale 3D Core - Cycle 1"
+
+% ------------------ main geometrical data
+% --- pins
+pin 1
+ u205 0.405765
+ helium 0.41402
+ Zrly4 0.47498
+water
+pin 1spM
+ u205 0.405765
+ helium 0.41402
+ Zrly4 0.47498
+waterSP_HMP
+pin 1spT
+ u205 0.405765
+ helium 0.41402
+ Zrly4 0.47498
+waterSP_HTP
+
+pin 2
+u27 0.405765
+helium 0.41402
+Zrly4 0.47498
+water
+pin 2spM
+u27 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HMP
+pin 2spT
+u27 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HTP
+
+pin 3
+u36 0.405765
+helium 0.41402
+Zrly4 0.47498
+water
+pin 3spM
+u36 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HMP
+pin 3spT
+u36 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HTP
+
+pin 4
+u195 0.405765
+helium 0.41402
+Zrly4 0.47498
+water
+pin 4spM
+u195 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HMP
+pin 4spT
+u195 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HTP
+
+pin t
+water 0.5515
+Zrly4 0.61214
+water
+pin tspM
+water 0.5515
+Zrly4 0.61214
+waterSP_HMP
+pin tspT
+water 0.5515
+Zrly4 0.61214
+waterSP_HTP
+
+pin x
+g30 0.405765
+helium 0.41402
+Zrly4 0.47498
+water
+pin xspM
+g30 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HMP
+pin xspT
+g30 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HTP
+
+pin G
+g25 0.405765
+helium 0.41402
+Zrly4 0.47498
+water
+pin GspM
+g25 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HMP
+pin GspT
+g25 0.405765
+helium 0.41402
+Zrly4 0.47498
+waterSP_HTP
+pin w
+water
+pin wspM
+waterSP_HMP
+
+pin s
+ss304 0.47498
+water
+pin sspM
+ss304 0.47498
+waterSP_HMP
+
+pin p 
+helium 0.41402 
+Zrly4 0.47498
+water
+pin pspT 
+helium 0.41402 
+Zrly4 0.47498
+waterSP_HTP
+
+% ===================================================================================
+
+surf assembly sqc 0.00 0.00 10.75 
+surf lattice sqc 0.00 0.00 10.71 
+% ---fuel array  name  LAT1
+lat LAT1_ 1 0 0 17 17 1.26 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  1  1  1  t  1  1  t  1  1  t  1  1  1  1  1 
+ 1  1  1  t  1  1  1  1  1  1  1  1  1  t  1  1  1 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  t  1  1  t  1  1  t  1  1  t  1  1  t  1  1 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  t  1  1  t  1  1  t  1  1  t  1  1  t  1  1 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 
+ 1  1  t  1  1  t  1  1  t  1  1  t  1  1  t  1  1
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 1  1  1  t  1  1  1  1  1  1  1  1  1  t  1  1  1
+ 1  1  1  1  1  t  1  1  t  1  1  t  1  1  1  1  1
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ 
+cell lat1a LAT1 fill LAT1_ -lattice
+cell lat1b LAT1 water lattice -assembly
+
+% ---fuel array  name  LAT1SPM
+lat LAT1SPM_ 1 0 0 17 17 1.26 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM 1spM tspM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM tspM 1spM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 
+1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM
+1spM 1spM 1spM tspM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM tspM 1spM 1spM 1spM
+1spM 1spM 1spM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM tspM 1spM 1spM 1spM 1spM 1spM
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM
+1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM 1spM
+
+cell lat1SPMa LAT1SPM fill LAT1SPM_ -lattice
+cell lat1SPMb LAT1SPM water lattice -assembly
+ 
+% ---fuel array  name  LAT1SPT
+lat LAT1SPT_ 1 0 0 17 17 1.26 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT 1spT tspT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT tspT 1spT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 
+1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT
+1spT 1spT 1spT tspT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT tspT 1spT 1spT 1spT
+1spT 1spT 1spT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT tspT 1spT 1spT 1spT 1spT 1spT
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT
+1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT 1spT
+
+cell lat1SPTa LAT1SPT fill LAT1SPT_ -lattice
+cell lat1SPTb LAT1SPT water lattice -assembly
+
+% ---fuel array  name  LAT2
+lat LAT2_ 1 0 0 17 17 1.26 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  2  2  2  t  2  2  t  2  2  t  2  2  2  2  2 
+ 2  2  2  t  2  2  2  2  2  2  2  2  2  t  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  t  2  2  t  2  2  t  2  2  t  2  2  t  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  t  2  2  t  2  2  t  2  2  t  2  2  t  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  t  2  2  t  2  2  t  2  2  t  2  2  t  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ 2  2  2  t  2  2  2  2  2  2  2  2  2  t  2  2  2
+ 2  2  2  2  2  t  2  2  t  2  2  t  2  2  2  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+
+cell lat2a LAT2 fill LAT2_ -lattice
+cell lat2b LAT2 water lattice -assembly
+
+% ---fuel array  name  LAT2SPM
+lat LAT2SPM_ 1 0 0 17 17 1.26 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+
+cell lat2SPMa LAT2SPM fill LAT2SPM_ -lattice
+cell lat2SPMb LAT2SPM water lattice -assembly
+
+% ---fuel array  name  LAT2SPT
+lat LAT2SPT_ 1 0 0 17 17 1.26 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+
+cell lat2SPTa LAT2SPT fill LAT2SPT_ -lattice
+cell lat2SPTb LAT2SPT water lattice -assembly
+
+
+% ---fuel array  name  LAT3
+lat LAT3_ 1 0 0 17 17 1.26 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  3  3  3  t  3  3  t  3  3  t  3  3  3  3  3  
+ 3  3  3  t  3  3  3  3  3  3  3  3  3  t  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  t  3  3  t  3  3  t  3  3  t  3  3  t  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  t  3  3  t  3  3  t  3  3  t  3  3  t  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  t  3  3  t  3  3  t  3  3  t  3  3  t  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+ 3  3  3  t  3  3  3  3  3  3  3  3  3  t  3  3  3 
+ 3  3  3  3  3  t  3  3  t  3  3  t  3  3  3  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+
+cell lat3a LAT3 fill LAT3_ -lattice
+cell lat3b LAT3 water lattice -assembly
+
+% ---fuel array  name  LAT3SPM
+lat LAT3SPM_ 1 0 0 17 17 1.26 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+
+cell lat3SPMa LAT3SPM fill LAT3SPM_ -lattice
+cell lat3SPMb LAT3SPM water lattice -assembly
+
+% ---fuel array  name  LAT3SPT
+lat LAT3SPT_ 1 0 0 17 17 1.26 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+
+cell lat3SPTa LAT3SPT fill LAT3SPT_ -lattice
+cell lat3SPTb LAT3SPT water lattice -assembly
+
+% ---fuel array  name  LAT4
+lat LAT4_ 1 0 0 17 17 1.26 
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4 
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  4  4  4  t  4  4  t  4  4  t  4  4  4  4  4  
+ 4  4  4  t  4  4  4  4  4  4  4  4  4  t  4  4  4  
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  t  4  4  t  4  4  t  4  4  t  4  4  t  4  4  
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  t  4  4  t  4  4  t  4  4  t  4  4  t  4  4  
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  
+ 4  4  t  4  4  t  4  4  t  4  4  t  4  4  t  4  4 
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4 
+ 4  4  4  t  4  4  4  4  4  4  4  4  4  t  4  4  4 
+ 4  4  4  4  4  t  4  4  t  4  4  t  4  4  4  4  4 
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4 
+ 4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4  4 
+
+cell lat4a LAT4 fill LAT4_ -lattice
+cell lat4b LAT4 water lattice -assembly
+
+% ---fuel array  name  LAT4SPM
+lat LAT4SPM_ 1 0 0 17 17 1.26 
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM 4spM tspM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM tspM 4spM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM  
+4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM 
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 
+4spM 4spM 4spM tspM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM tspM 4spM 4spM 4spM 
+4spM 4spM 4spM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM tspM 4spM 4spM 4spM 4spM 4spM 
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 
+4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 4spM 
+
+cell lat4SPMa LAT4SPM fill LAT4SPM_ -lattice
+cell lat4SPMb LAT4SPM water lattice -assembly
+
+% ---fuel array  name  LAT4SPT
+lat LAT4SPT_ 1 0 0 17 17 1.26 
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT 4spT tspT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT tspT 4spT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT  
+4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT 
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 
+4spT 4spT 4spT tspT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT tspT 4spT 4spT 4spT 
+4spT 4spT 4spT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT tspT 4spT 4spT 4spT 4spT 4spT 
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 
+4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 4spT 
+
+cell lat4SPTa LAT4SPT fill LAT4SPT_ -lattice
+cell lat4SPTb LAT4SPT water lattice -assembly
+
+% ---fuel array  name  GAD21
+lat GAD21_ 1 0 0 17 17 1.26 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ 2  2  2  2  2  2  2  2  G  2  2  2  2  2  2  2  2 
+ 2  2  G  2  2  t  2  2  t  2  2  t  2  2  G  2  2 
+ 2  2  2  t  2  2  2  2  2  2  2  2  2  t  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  t  2  2  t  2  2  t  2  2  t  2  2  t  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  G  t  2  2  t  2  2  t  2  2  t  2  2  t  G  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2 
+ 2  2  t  2  2  t  2  2  t  2  2  t  2  2  t  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ 2  2  2  t  2  2  2  2  2  2  2  2  2  t  2  2  2
+ 2  2  G  2  2  t  2  2  t  2  2  t  2  2  G  2  2
+ 2  2  2  2  2  2  2  2  G  2  2  2  2  2  2  2  2
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+
+cell latgad21a GAD21 fill GAD21_ -lattice
+cell latgad21b GAD21 water lattice -assembly
+
+% ---fuel array  name  GAD21SPM
+lat GAD21SPM_ 1 0 0 17 17 1.26 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM GspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM GspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM GspM 2spM 2spM 
+2spM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM GspM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM GspM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 
+2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM tspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM tspM 2spM 2spM 2spM
+2spM 2spM GspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM tspM 2spM 2spM GspM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM GspM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM 2spM
+
+cell latgad21SPMa GAD21SPM fill GAD21SPM_ -lattice
+cell latgad21SPMb GAD21SPM water lattice -assembly
+
+% ---fuel array  name  GAD21SPT
+lat GAD21SPT_ 1 0 0 17 17 1.26 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT GspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT GspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT GspT 2spT 2spT 
+2spT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT GspT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT GspT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 
+2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT tspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT tspT 2spT 2spT 2spT
+2spT 2spT GspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT tspT 2spT 2spT GspT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT GspT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT 2spT
+
+cell latgad21SPTa GAD21SPT fill GAD21SPT_ -lattice
+cell latgad21SPTb GAD21SPT water lattice -assembly
+
+% ---fuel array  name  GAD31
+lat GAD31_ 1 0 0 17 17 1.26 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+ 3  3  3  3  3  3  3  3  x  3  3  3  3  3  3  3  3  
+ 3  3  x  3  3  t  3  3  t  3  3  t  3  3  x  3  3  
+ 3  3  3  t  3  3  3  3  3  3  3  3  3  t  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  t  3  3  t  3  3  t  3  3  t  3  3  t  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  x  t  3  3  t  3  3  t  3  3  t  3  3  t  x  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  
+ 3  3  t  3  3  t  3  3  t  3  3  t  3  3  t  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+ 3  3  3  t  3  3  3  3  3  3  3  3  3  t  3  3  3 
+ 3  3  x  3  3  t  3  3  t  3  3  t  3  3  x  3  3 
+ 3  3  3  3  3  3  3  3  x  3  3  3  3  3  3  3  3 
+ 3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3 
+
+cell latgad31a GAD31 fill GAD31_ -lattice
+cell latgad31b GAD31 water lattice -assembly
+
+% ---fuel array  name  GAD31SPM
+lat GAD31SPM_ 1 0 0 17 17 1.26 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM xspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM xspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM xspM 3spM 3spM  
+3spM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM xspM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM xspM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM  
+3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM tspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM tspM 3spM 3spM 3spM 
+3spM 3spM xspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM tspM 3spM 3spM xspM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM xspM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 3spM 
+
+cell latgad31SPMa GAD31SPM fill GAD31SPM_ -lattice
+cell latgad31SPMb GAD31SPM water lattice -assembly
+
+% ---fuel array  name  GAD31SPT
+lat GAD31SPT_ 1 0 0 17 17 1.26 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT xspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT xspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT xspT 3spT 3spT  
+3spT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT xspT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT xspT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT  
+3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT tspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT tspT 3spT 3spT 3spT 
+3spT 3spT xspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT tspT 3spT 3spT xspT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT xspT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 3spT 
+
+cell latgad31SPTa GAD31SPT fill GAD31SPT_ -lattice
+cell latgad31SPTb GAD31SPT water lattice -assembly
+
+% ---fuel array  name  GAP
+lat GAP_ 1 0 0 17 17 1.26 
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w 
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  w  w  w  t  w  w  t  w  w  t  w  w  w  w  w  
+ w  w  w  t  w  w  w  w  w  w  w  w  w  t  w  w  w  
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  t  w  w  t  w  w  t  w  w  t  w  w  t  w  w  
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  t  w  w  t  w  w  t  w  w  t  w  w  t  w  w  
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  
+ w  w  t  w  w  t  w  w  t  w  w  t  w  w  t  w  w 
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w 
+ w  w  w  t  w  w  w  w  w  w  w  w  w  t  w  w  w 
+ w  w  w  w  w  t  w  w  t  w  w  t  w  w  w  w  w 
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w 
+ w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w  w 
+
+cell latgapa GAP fill GAP_ -lattice
+cell latgapb GAP water lattice -assembly
+
+
+% ---fuel array  name  PLUG
+lat PLUG_ 1 0 0 17 17 1.26 
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s 
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  s  s  s  t  s  s  t  s  s  t  s  s  s  s  s  
+ s  s  s  t  s  s  s  s  s  s  s  s  s  t  s  s  s  
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  t  s  s  t  s  s  t  s  s  t  s  s  t  s  s  
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  t  s  s  t  s  s  t  s  s  t  s  s  t  s  s  
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  
+ s  s  t  s  s  t  s  s  t  s  s  t  s  s  t  s  s 
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s 
+ s  s  s  t  s  s  s  s  s  s  s  s  s  t  s  s  s 
+ s  s  s  s  s  t  s  s  t  s  s  t  s  s  s  s  s 
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s 
+ s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s  s 
+
+cell latpluga PLUG fill PLUG_ -lattice
+cell latplugb PLUG water lattice -assembly
+
+% ---fuel array  name  PLEN
+lat PLEN_ 1 0 0 17 17 1.26 
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p 
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  p  p  p  t  p  p  t  p  p  t  p  p  p  p  p  
+ p  p  p  t  p  p  p  p  p  p  p  p  p  t  p  p  p  
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  t  p  p  t  p  p  t  p  p  t  p  p  t  p  p  
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  t  p  p  t  p  p  t  p  p  t  p  p  t  p  p  
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  
+ p  p  t  p  p  t  p  p  t  p  p  t  p  p  t  p  p 
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p 
+ p  p  p  t  p  p  p  p  p  p  p  p  p  t  p  p  p 
+ p  p  p  p  p  t  p  p  t  p  p  t  p  p  p  p  p 
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p 
+ p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p
+
+cell latplena PLEN fill PLEN_ -lattice
+cell latplenb PLEN water lattice -assembly
+
+% ---fuel array  name  PLENSPT
+lat PLENSPT_ 1 0 0 17 17 1.26 
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT 
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT pspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT pspT pspT pspT  
+pspT pspT pspT tspT pspT pspT pspT pspT pspT pspT pspT pspT pspT tspT pspT pspT pspT  
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT  
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT  
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT  
+pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT 
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT 
+pspT pspT pspT tspT pspT pspT pspT pspT pspT pspT pspT pspT pspT tspT pspT pspT pspT 
+pspT pspT pspT pspT pspT tspT pspT pspT tspT pspT pspT tspT pspT pspT pspT pspT pspT 
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT 
+pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT pspT
+
+cell latplenSPTa PLENSPT fill PLENSPT_ -lattice
+cell latplenSPTb PLENSPT water lattice -assembly
+
+% ===================================================================================
+
+% Core arrays
+% ---fuel array
+lat core 1 0 0 7 7 21.5  %
+ Y     Y    LAT3  GAD31 LAT3   Y     Y
+ Y    LAT2  GAD21 LAT1  GAD21 LAT2   Y
+LAT3  GAD21 LAT1  LAT1  LAT1  GAD21 LAT3
+GAD31 LAT1  LAT1  LAT4  LAT1  LAT1  GAD31
+LAT3  GAD21 LAT1  LAT1  LAT1  GAD21 LAT3
+ Y    LAT2  GAD21 LAT1  GAD21 LAT2   Y
+ Y     Y    LAT3  GAD31 LAT3   Y     Y
+
+% ---fuel array with spacer type M
+lat coreSPM 1 0 0 7 7 21.5  %
+   Y        Y     LAT3SPM  GAD31SPM LAT3SPM     Y       Y
+   Y     LAT2SPM  GAD21SPM LAT1SPM  GAD21SPM LAT2SPM    Y
+LAT3SPM  GAD21SPM LAT1SPM  LAT1SPM  LAT1SPM  GAD21SPM LAT3SPM
+GAD31SPM LAT1SPM  LAT1SPM  LAT4SPM  LAT1SPM  LAT1SPM  GAD31SPM
+LAT3SPM  GAD21SPM LAT1SPM  LAT1SPM  LAT1SPM  GAD21SPM LAT3SPM
+   Y     LAT2SPM  GAD21SPM LAT1SPM  GAD21SPM LAT2SPM    Y
+   Y        Y     LAT3SPM  GAD31SPM LAT3SPM     Y       Y
+
+% ---fuel array with spacer type S
+lat coreSPT 1 0 0 7 7 21.5  %
+   Y        Y     LAT3SPT  GAD31SPT LAT3SPT     Y       Y
+   Y     LAT2SPT  GAD21SPT LAT1SPT  GAD21SPT LAT2SPT    Y
+LAT3SPT  GAD21SPT LAT1SPT  LAT1SPT  LAT1SPT  GAD21SPT LAT3SPT
+GAD31SPT LAT1SPT  LAT1SPT  LAT4SPT  LAT1SPT  LAT1SPT  GAD31SPT
+LAT3SPT  GAD21SPT LAT1SPT  LAT1SPT  LAT1SPT  GAD21SPT LAT3SPT
+   Y     LAT2SPT  GAD21SPT LAT1SPT  GAD21SPT LAT2SPT    Y
+   Y        Y     LAT3SPT  GAD31SPT LAT3SPT     Y       Y
+
+% GAP array
+lat gap 1 0 0 7 7 21.5  %
+ Y    Y   GAP GAP GAP   Y   Y
+ Y   GAP  GAP GAP GAP  GAP  Y
+GAP  GAP  GAP GAP GAP  GAP GAP
+GAP  GAP  GAP GAP GAP  GAP GAP
+GAP  GAP  GAP GAP GAP  GAP GAP
+ Y   GAP  GAP GAP GAP  GAP  Y
+ Y    Y   GAP GAP GAP   Y   Y   
+
+% PLUG array
+lat plug 1 0 0 7 7 21.5  %
+ Y    Y   PLUG PLUG PLUG  Y    Y
+ Y   PLUG PLUG PLUG PLUG PLUG  Y
+PLUG PLUG PLUG PLUG PLUG PLUG PLUG
+PLUG PLUG PLUG PLUG PLUG PLUG PLUG
+PLUG PLUG PLUG PLUG PLUG PLUG PLUG
+ Y   PLUG PLUG PLUG PLUG PLUG  Y
+ Y    Y   PLUG PLUG PLUG  Y    Y 
+ 
+% PLEN array
+lat plen 1 0 0 7 7 21.5  %
+ Y    Y   PLEN PLEN PLEN  Y    Y
+ Y   PLEN PLEN PLEN PLEN PLEN  Y
+PLEN PLEN PLEN PLEN PLEN PLEN PLEN
+PLEN PLEN PLEN PLEN PLEN PLEN PLEN
+PLEN PLEN PLEN PLEN PLEN PLEN PLEN
+ Y   PLEN PLEN PLEN PLEN PLEN  Y
+ Y    Y   PLEN PLEN PLEN  Y    Y 
+
+% PLEN array with spacer type S
+lat plenSPT 1 0 0 7 7 21.5  %
+   Y       Y    PLENSPT PLENSPT PLENSPT    Y       Y
+   Y    PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT    Y
+PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT
+PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT
+PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT
+   Y    PLENSPT PLENSPT PLENSPT PLENSPT PLENSPT    Y
+   Y       Y    PLENSPT PLENSPT PLENSPT    Y       Y 
+
+% ===================================================================================
+
+% Surfaces
+surf baffleINWater gcross 0.00 0.00 75.25 53.75 32.25 
+surf baffleIN gcross 0.00 0.00 75.35 53.85 32.35 
+surf baffleOUT gcross 0.00 0.00 78.20 56.70 35.20 
+surf 100 sqc 0.00 0.00 10.75
+
+surf 801 cylz 0 0 92.875
+surf 802 cylz 0 0 105.45
+surf 803 cylz 0 0 111.15
+surf 804 cylz 0 0 130.79
+surf 805 cylz 0 0 154.15
+
+
+% Axials 
+surf bottom pz 0
+% Lowwer Nozzle
+surf LowerNozUp pz 10.16
+% Gap
+surf GapUp pz 12.16
+% Plug
+surf PlugLowUp pz 13.35253
+% core
+surf spacer1Down pz 16.0655
+% Fuel with spacer materials
+surf spacer1Up   pz 20.5105
+
+surf 1axial1Division pz 25
+surf 1axial2Division pz 30
+surf 1axial3Division pz 35
+surf 1axial4Division pz 40
+surf 1axial5Division pz 45
+surf 1axial6Division pz 50
+surf 1axial7Division pz 55
+surf 1axial8Division pz 60
+surf 1axial9Division pz 65
+
+surf spacer2Down pz 67.722
+% Fuel with spacer materials
+surf spacer2Up   pz 72.167
+
+surf 2axial1Division pz 75
+surf 2axial2Division pz 80
+surf 2axial3Division pz 85
+surf 2axial4Division pz 90
+surf 2axial5Division pz 95
+surf 2axial6Division pz 100
+surf 2axial7Division pz 105
+surf 2axial8Division pz 110
+surf 2axial9Division pz 115
+
+surf spacer3Down pz 119.375
+% Fuel with spacer materials
+surf spacer3Up   pz 123.8235
+
+surf 3axial1Division pz 130
+surf 3axial2Division pz 135
+surf 3axial3Division pz 140
+surf 3axial4Division pz 145
+surf 3axial5Division pz 150
+surf 3axial6Division pz 155
+surf 3axial7Division pz 160
+surf 3axial8Division pz 165
+
+surf spacer4Down pz 171.035
+% Fuel with spacer materials
+surf spacer4Up   pz 175.48
+
+surf 4axial1Division pz 180
+surf 4axial2Division pz 185
+surf 4axial3Division pz 190
+surf 4axial4Division pz 195
+surf 4axial5Division pz 200
+surf 4axial6Division pz 205
+surf 4axial7Division pz 210
+
+surf fuelTop pz 213.35213
+% Plen
+surf spacer5Down pz 222.39725
+% Plen with spacer material
+surf spacer5Up   pz 226.84225
+% Plug
+surf PlugUp pz 228.0346
+% Gap
+surf GapUp2 pz 230.0346
+% Upper Nozzle 
+surf top pz 239.05414
+
+
+% Cells
+cell SysBafWater 0 water -baffleIN baffleINWater bottom -top
+cell water Y water -100 bottom -top
+
+
+cell LowerNozzle 0 LowNozMat bottom -LowerNozUp -baffleINWater
+cell LowerGap 0 fill gap LowerNozUp -GapUp -baffleINWater
+cell LowerPlug 0 fill plug GapUp -PlugLowUp -baffleINWater
+cell system0 0 fill core PlugLowUp -spacer1Down -baffleINWater
+
+cell spacer1 0 fill coreSPM spacer1Down -spacer1Up  -baffleINWater
+cell system101 0 fill core  spacer1Up       -1axial1Division  -baffleINWater
+cell system102 0 fill core  1axial1Division -1axial2Division  -baffleINWater
+cell system103 0 fill core  1axial2Division -1axial3Division  -baffleINWater
+cell system104 0 fill core  1axial3Division -1axial4Division  -baffleINWater
+cell system105 0 fill core  1axial4Division -1axial5Division  -baffleINWater
+cell system106 0 fill core  1axial5Division -1axial6Division  -baffleINWater
+cell system107 0 fill core  1axial6Division -1axial7Division  -baffleINWater
+cell system108 0 fill core  1axial7Division -1axial8Division  -baffleINWater
+cell system109 0 fill core  1axial8Division -1axial9Division  -baffleINWater
+cell system110 0 fill core  1axial9Division -spacer2Down      -baffleINWater
+
+cell spacer2 0 fill coreSPT spacer2Down -spacer2Up  -baffleINWater
+
+cell system201 0 fill core  spacer2Up       -2axial1Division  -baffleINWater
+cell system202 0 fill core  2axial1Division -2axial2Division  -baffleINWater
+cell system203 0 fill core  2axial2Division -2axial3Division  -baffleINWater
+cell system204 0 fill core  2axial3Division -2axial4Division  -baffleINWater
+cell system205 0 fill core  2axial4Division -2axial5Division  -baffleINWater
+cell system206 0 fill core  2axial5Division -2axial6Division  -baffleINWater
+cell system207 0 fill core  2axial6Division -2axial7Division  -baffleINWater
+cell system208 0 fill core  2axial7Division -2axial8Division  -baffleINWater
+cell system209 0 fill core  2axial8Division -2axial9Division  -baffleINWater
+cell system210 0 fill core  2axial9Division -spacer3Down      -baffleINWater
+
+cell spacer3 0 fill coreSPT spacer3Down -spacer3Up  -baffleINWater
+
+cell system301 0 fill core  spacer3Up -3axial1Division  -baffleINWater
+cell system302 0 fill core  3axial1Division -3axial2Division  -baffleINWater
+cell system303 0 fill core  3axial2Division -3axial3Division  -baffleINWater
+cell system304 0 fill core  3axial3Division -3axial4Division  -baffleINWater
+cell system305 0 fill core  3axial4Division -3axial5Division  -baffleINWater
+cell system306 0 fill core  3axial5Division -3axial6Division  -baffleINWater
+cell system307 0 fill core  3axial6Division -3axial7Division  -baffleINWater
+cell system308 0 fill core  3axial7Division -3axial8Division  -baffleINWater
+cell system309 0 fill core  3axial8Division -spacer4Down      -baffleINWater
+
+cell spacer4 0 fill coreSPT spacer4Down -spacer4Up  -baffleINWater
+
+cell system401 0 fill core  spacer4Up -4axial1Division  -baffleINWater
+cell system402 0 fill core  4axial1Division -4axial2Division  -baffleINWater
+cell system403 0 fill core  4axial2Division -4axial3Division  -baffleINWater
+cell system404 0 fill core  4axial3Division -4axial4Division  -baffleINWater
+cell system405 0 fill core  4axial4Division -4axial5Division  -baffleINWater
+cell system406 0 fill core  4axial5Division -4axial6Division  -baffleINWater
+cell system407 0 fill core  4axial6Division -4axial7Division  -baffleINWater
+cell system408 0 fill core  4axial7Division -fuelTop      -baffleINWater
+
+cell system4a 0 fill plen fuelTop -spacer5Down -baffleINWater
+cell spacer5 0 fill plenSPT spacer5Down -spacer5Up  -baffleINWater
+cell system5 0 fill plug -baffleINWater spacer5Up  -PlugUp
+cell system6 0 fill gap -baffleINWater PlugUp -GapUp2
+cell system7 0 UppNozMat GapUp2 -top -baffleINWater
+
+
+cell baffle 0 ss304 -baffleOUT baffleIN bottom -top
+ 
+cell SS1  0 modssHOM baffleOUT -801 bottom -top
+cell MOD2 0 water 801 -802 bottom -top
+cell SS2  0  ss304 802 -803 bottom -top
+cell MOD3 0 water 803 -804 bottom -top
+cell SS3  0  ss304 804 -805 bottom - top
+cell outside 0 outside 805 
+
+cell outside1 0 outside -bottom
+cell outside2 0 outside top
+
+
+% % -- General proble data
+set bc 1 1 1 % all vacuum
+
+% --- Material data
+% u195 fuel
+mat u195 -10.412 tmp 700.0 burn 1
+92234.06c	-9.55780E-05 %fuel
+92235.06c	-1.71888E-02 %fuel
+92236.06c	-7.90686E-05 %fuel
+92238.06c	-8.64115E-01 %fuel
+ 8016.06c	-1.18200E-01 %fuel
+ 8017.06c	-4.78472E-05	 %fuel
+
+
+%div u195 sep 1 subr 2 0.0 0.405765  
+
+% u205 fuel
+mat u205 -10.412 tmp 700.0 burn 1
+92234.06c	-1.00901E-04 %fuel
+92235.06c	-1.80703E-02 %fuel
+92236.06c	-8.31234E-05 %fuel
+92238.06c	-8.63224E-01 %fuel
+ 8016.06c	-1.18200E-01 %fuel
+ 8017.06c	-4.78472E-05	 %fuel
+
+
+%div u205 sep 1 subr 1 0.0 0.405765 
+
+% u27 fuel
+mat u27 -10.412 tmp 700.0 burn 1
+92234.06c	-1.35993E-04 %fuel
+92235.06c	-2.37999E-02 %fuel
+92236.06c	-1.09480E-04 %fuel
+92238.06c	-8.57433E-01 %fuel
+ 8016.06c	-1.18200E-01 %fuel
+ 8017.06c	-4.78472E-05	 %fuel
+
+
+%div u27 sep 1 subr 1 0.0 0.405765 
+
+% u36 fuel
+mat u36 -10.412 tmp 700.0 burn 1
+92234.06c	-1.85743E-04 %fuel
+92235.06c	-3.17332E-02 %fuel
+92236.06c	-1.45973E-04 %fuel
+92238.06c	-8.49413E-01 %fuel
+ 8016.06c	-1.18200E-01 %fuel
+ 8017.06c	-4.78472E-05	 %fuel
+
+
+%div u36 sep 1 subr 1 0.0 0.405765 
+
+% g30 fuel
+mat g30 -10.322 tmp 700.0 vol 3308 burn 1
+92234.06c	-6.97669E-05  %fuel
+92235.06c	-1.28255E-02  %fuel
+92236.06c	-5.89973E-05  %fuel
+92238.06c	-8.42080E-01  %fuel
+ 8016.06c	-1.18616E-01  %fuel
+ 8017.06c	-4.80154E-05	 %fuel		
+64152.06c 	-5.02908E-05	 %fuel
+64154.06c 	-5.55386E-04 %fuel
+64155.06c 	-3.79505E-03 %fuel
+64156.06c 	-5.28282E-03 %fuel
+64157.06c 	-4.06484E-03 %fuel
+64158.06c 	-6.49292E-03 %fuel
+64160.06c	-5.78645E-03 %fuel
+
+
+%div g30 sep 1 subr 1 0.0 0.405765 
+
+% g25 fuel
+mat g25 -10.322 tmp 700.0 vol 6617 burn 1
+92234.06c	-8.54458E-05  %fuel
+92235.06c	-1.54699E-02  %fuel
+92236.06c	-7.11618E-05  %fuel
+92238.06c	-8.43815E-01  %fuel
+ 8016.06c	-1.18547E-01  %fuel
+ 8017.06c	-4.79873E-05	 %fuel		
+64152.06c 	-4.19090E-05	 %fuel
+64154.06c 	-4.62821E-04 %fuel
+64155.06c 	-3.16254E-03 %fuel
+64156.06c 	-4.40235E-03 %fuel
+64157.06c 	-3.38737E-03 %fuel
+64158.06c 	-5.41077E-03 %fuel
+64160.06c	-4.82204E-03 %fuel
+
+
+%div g25 sep 1 subr 1 0.0 0.405765 
+
+% --- Helium:
+mat helium -0.000491 tmp 600
+2003.06c	-0.00000101	%3He
+2004.06c	-0.99999900	%4He
+
+%  Mat  SS 
+mat ss304 -8.0 tmp 600
+ 6000.06c 3.208965159714260E-04
+14028.06c 1.715383657372789E-03
+15031.06c 6.999431156968202E-05
+24050.06c 7.649192995285634E-04
+24052.06c 1.475073706441829E-02
+24053.06c 1.672615114511136E-03
+24054.06c 4.163485148259374E-04
+25055.06c 1.753879914035959E-03
+26054.06c 3.447786493910686E-03
+26056.06c 5.412285267531677E-02
+26057.06c 1.249929271261278E-03
+26058.06c 1.663431595905801E-04
+28058.06c 5.308575803254905E-03
+28060.06c 2.044850559559879E-03
+28061.06c 8.888800066852854E-05
+28062.06c 2.834148822304512E-04
+28064.06c 7.217746996432661E-05
+
+%  Mat  Zircalloy4
+mat Zrly4 -6.55 tmp 600
+24050.06c 3.301214425665012E-06
+24052.06c 6.366056335347724E-05
+24053.06c 7.218599327674959E-06
+24054.06c 1.796865213660143E-06
+26054.06c 8.683052929648038E-06
+26056.06c 1.363057726342521E-04
+26057.06c 3.147889943163237E-06
+26058.06c 4.189260874533580E-07
+40090.06c 2.188651296623144E-02
+40091.06c 4.772929094597762E-03
+40092.06c 7.295520682960717E-03
+40094.06c 7.393337938546856E-03
+40096.06c 1.191101627774289E-03
+50112.06c 4.680644676297663E-06
+50114.06c 3.184777892905842E-06
+50115.06c 1.640644051402326E-06
+50116.06c 7.016151639406619E-05
+50117.06c 3.705920104193035E-05
+50118.06c 1.168717576861274E-04
+50119.06c 4.145041763363620E-05
+50120.06c 1.572121153620019E-04
+50122.06c 2.234168851097712E-05
+50124.06c 2.793919497357911E-05
+72174.06c 3.541386707768866E-09
+72176.06c 1.164230165222162E-07
+72177.06c 4.116857397409631E-07
+72178.06c 6.038070773496498E-07
+72179.06c 3.014604651875505E-07
+72180.06c 7.764483265923927E-07				   
+
+%-----------MODERATOR DEFINITION-----------------
+%Water mixed with boron (initial boron concentration)
+%mat water -0.75357 tmp 531.5 moder lwtr 1001
+%5010.03c 1.08591E-05
+%5011.03c 4.37091E-05
+%1001.03c 5.03155E-02
+%8016.03c 2.51578E-02
+%therm lwtr lwj3.00t
+
+mat clear_water -0.6428672028575688 tmp 602.4 moder lwtr 1001
+ 1001.03c   0.66667
+ 8016.03c   0.33333
+ 
+therm lwtr lwe7.10t
+
+% --- Natural boron:
+mat boron   1.00000  tmp 531.5
+ 5010.03c   0.19900
+ 5011.03c   0.80100
+
+% ---- Water + 1278 ppm boron:
+mix water
+clear_water      -0.998722
+boron      -1278E-6
+
+% ---- Water + 0 ppm boron:
+mix water_0B
+clear_water      -1.00000
+
+% ---- Water + 450 ppm boron:
+mix water_450B
+clear_water      -0.99955
+boron      -450E-6
+
+% ---- Water + 750 ppm boron:
+mix water_750B
+clear_water      -0.99925
+boron      -750E-6
+
+% ---- Water + 1000 ppm boron:
+mix water_1000B
+water      -0.99900
+boron      -1000E-6
+
+branch HIS
+var BHI 1278
+
+% --nominal brnch
+branch nom
+
+% --- Branch B0
+branch B0   
+repm water water_0B
+var BOR 0  
+
+% --- Branch B450
+branch B450   
+repm water water_450B
+var BOR 450  
+
+% --- Branch B750
+branch B750   
+repm water water_750B
+var BOR 750  
+
+% --- Branch B1000
+branch B1000  
+repm water water_1000B
+var BOR 1000
+
+coef 12 0 0.1 1 3 5 10 15 20 30 40 50 55
+5 nom B0 B450 B750 B1000 
+1 HIS 
+%--------------------------------------
+mat inc -8.0 tmp 600 
+14028.06c 4.390239804532583E-03 
+22048.06c 2.575316075984435E-03 
+24050.06c 6.182164352543395E-04
+24052.06c 1.192168514798812E-02
+24053.06c 1.351826065811920E-03
+24054.06c 3.364972442597208E-04
+26054.06c 3.613493072854896E-04
+26056.06c 5.672413484443086E-03
+26057.06c 1.310012609349080E-04
+26058.06c 1.743376810288795E-05
+28058.06c 4.176032749117611E-02
+28060.06c 1.608603604805462E-02
+28061.06c 6.992481185610527E-04
+28062.06c 2.229511483147404E-03
+28064.06c 5.677901588934570E-04
+
+mat modssHOM -8.0 tmp 600 
+ 6000.06c 2.626442115391975E-04    
+14028.06c 1.403990276472864E-03    
+15031.06c 5.728825293972658E-05    
+24050.06c 6.260635947000557E-04    
+24052.06c 1.207303760895657E-02    
+24053.06c 1.368985501850819E-03    
+24054.06c 3.407688209731494E-04    
+25055.06c 1.435498312476000E-03    
+26054.06c 2.821910242644390E-03    
+26056.06c 4.429793799452310E-02    
+26057.06c 1.023029766890377E-03    
+26058.06c 1.361469066229971E-04    
+28058.06c 4.344910701262018E-03    
+28060.06c 1.673649093089294E-03    
+28061.06c 7.275217301817063E-05    
+28062.06c 2.319666140860177E-04    
+28064.06c 5.907510286388614E-05    
+ 1001.06c 4.858909810641936E-02    
+ 8016.06c 2.429454905320968E-02    
+ 5010.06c 1.048410776444820E-05    
+ 5011.06c 4.219985085086938E-05    
+
+% mix  LowNozMat
+mix LowNozMat 
+ ss304 -0.679  
+ water -0.321 
+%  mix  UppNozMat
+mix UppNozMat 
+ ss304 -0.71  
+ water -0.29
+
+%  mix  waterSP_HMP
+mix waterSP_HMP
+ water -0.3816  
+ inc -0.6184
+%  mix  waterSP_HTP
+mix waterSP_HTP
+ water -0.4089  
+ Zrly4 -0.5911
+ 
+%--Libraries
+set acelib "/codes/SERPENT/xsdata/jeff311.xsdata"
+set declib "/codes/SERPENT/xsdata/sss_jeff311.dec"
+set nfylib "/codes/SERPENT/xsdata/sss_jeff311.nfy"
+
+% --- plot and etc
+% plot 2 3000 3000
+% plot 3 3000 3000
+% plot 3 3000 3000 100 53.75 75.25 10.75 -10.75 %FA with Gd
+% plot 3 3000 3000 100 -10.75 10.75 10.75 -10.75 %FA without Gd
+
+% --- neutron histories
+set pop 25000 1000 200
+
+%set iter nuc 40 1.0 2 50100 50110 5 water LowNozMat UppNozMat waterSP_HMP waterSP_HTP
+
+%set opti 1
+%set egrid 5e-4 1e-10 20
+%set fpcut 2E-4
+
+set mcvol 200000
+
+%Electrical power is supposed to be 100MW (we will scale the thermal power the same way as for NuScale 8/3 -> thermal power is 270 MWt)
+set power 270000000
+
+%Burnup in MWd/kg
+dep butot 0.1 1 3 5 10 15 20 30 40 50 55
+
+
+set pcc LELI %linear extrapolation for predictor, linear interpolation for corrector
+
+% --- Detectors to collect proper data
+%
+%det _assemblies_ dr -8 void dx -75.25 75.25 7  dy -75.25 75.25 7
+%
+%det _PinsD4_ dr -8 void dx -10.75 10.75 17 dy -10.75 10.75 17
+%det _PinsD5_ dr -8 void dx  10.75 32.25 17 dy -10.75 10.75 17
+%det _PinsD6_ dr -8 void dx  32.25 53.75 17 dy -10.75 10.75 17
+%det _PinsD7_ dr -8 void dx  53.75 75.25 17 dy -10.75 10.75 17
+%
+%det _PinsC4_ dr -8 void dx -10.75 10.75 17 dy 10.75 32.25 17
+%det _PinsC5_ dr -8 void dx  10.75 32.25 17 dy 10.75 32.25 17
+%det _PinsC6_ dr -8 void dx  32.25 53.75 17 dy 10.75 32.25 17
+%det _PinsC7_ dr -8 void dx  53.75 75.25 17 dy 10.75 32.25 17
+%
+%det _PinsB4_ dr -8 void dx -10.75 10.75 17 dy 32.25 53.75 17
+%det _PinsB5_ dr -8 void dx  10.75 32.25 17 dy 32.25 53.75 17
+%det _PinsB6_ dr -8 void dx  32.25 53.75 17 dy 32.25 53.75 17
+%
+%det _PinsA4_ dr -8 void dx -10.75 10.75 17 dy 53.75 75.25 17
+%det _PinsA5_ dr -8 void dx  10.75 32.25 17 dy 53.75 75.25 17
+                        
+
+%  G  X  X  F  F  F  X  X 
+%  F  X  F  F  F  F  F  X 
+%  E  F  F  F  F  F  F  F
+%  D  F  F  F  F  F  F  F
+%  C  F  F  F  F  F  F  F 
+%  B  X  F  F  F  F  F  X 
+%  A  X  X  F  F  F  X  X
+%     1  2  3  4  5  6  7

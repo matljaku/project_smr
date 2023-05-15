@@ -61,71 +61,71 @@ O_Gd = 3 * MM_O / (2 * MM_Gd + 3 * MM_O)
 #-------------------------------------
 
 u195inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[0])}
-92235.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[1])}
-92236.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[2])}
-92238.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[3])}
- 8016.06c	-#{sprintf("%.5E",O*w_O[0])}
- 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	
+"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[0])} %fuel
+92235.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[1])} %fuel
+92236.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[2])} %fuel
+92238.06c	-#{sprintf("%.5E",U*UEnrichement(u195fuelEnrichement)[3])} %fuel
+ 8016.06c	-#{sprintf("%.5E",O*w_O[0])} %fuel
+ 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	 %fuel
 "
 
 u205inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[0])}
-92235.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[1])}
-92236.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[2])}
-92238.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[3])}
- 8016.06c	-#{sprintf("%.5E",O*w_O[0])}
- 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	
+"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[0])} %fuel
+92235.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[1])} %fuel
+92236.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[2])} %fuel
+92238.06c	-#{sprintf("%.5E",U*UEnrichement(u205fuelEnrichement)[3])} %fuel
+ 8016.06c	-#{sprintf("%.5E",O*w_O[0])} %fuel
+ 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	 %fuel
 "
 
 u270inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[0])}
-92235.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[1])}
-92236.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[2])}
-92238.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[3])}
- 8016.06c	-#{sprintf("%.5E",O*w_O[0])}
- 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	
+"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[0])} %fuel
+92235.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[1])} %fuel
+92236.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[2])} %fuel
+92238.06c	-#{sprintf("%.5E",U*UEnrichement(u270fuelEnrichement)[3])} %fuel
+ 8016.06c	-#{sprintf("%.5E",O*w_O[0])} %fuel
+ 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	 %fuel
 "
 
 u360inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[0])}
-92235.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[1])}
-92236.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[2])}
-92238.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[3])}
- 8016.06c	-#{sprintf("%.5E",O*w_O[0])}
- 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	
+"92234.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[0])} %fuel
+92235.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[1])} %fuel
+92236.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[2])} %fuel
+92238.06c	-#{sprintf("%.5E",U*UEnrichement(u360fuelEnrichement)[3])} %fuel
+ 8016.06c	-#{sprintf("%.5E",O*w_O[0])} %fuel
+ 8017.06c	-#{sprintf("%.5E",O*w_O[1])}	 %fuel
 "
 
 g30inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[0])} 
-92235.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[1])} 
-92236.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[2])} 
-92238.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[3])} 
- 8016.06c	-#{sprintf("%.5E",w_O[0]*(O*(1-g30GdEnrichement/100)+O_Gd*g30GdEnrichement/100))} 
- 8017.06c	-#{sprintf("%.5E",w_O[1]*(O*(1-g30GdEnrichement/100)+O_Gd*g30GdEnrichement/100))}			
-64152.06c 	-#{sprintf("%.5E",w_Gd[0]*Gd*g30GdEnrichement/100)}	
-64154.06c 	-#{sprintf("%.5E",w_Gd[1]*Gd*g30GdEnrichement/100)}
-64155.06c 	-#{sprintf("%.5E",w_Gd[2]*Gd*g30GdEnrichement/100)}
-64156.06c 	-#{sprintf("%.5E",w_Gd[3]*Gd*g30GdEnrichement/100)}
-64157.06c 	-#{sprintf("%.5E",w_Gd[4]*Gd*g30GdEnrichement/100)}
-64158.06c 	-#{sprintf("%.5E",w_Gd[5]*Gd*g30GdEnrichement/100)}
-64160.06c	-#{sprintf("%.5E",w_Gd[6]*Gd*g30GdEnrichement/100)}
+"92234.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[0])}  %fuel
+92235.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[1])}  %fuel
+92236.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[2])}  %fuel
+92238.06c	-#{sprintf("%.5E",U*(1-g30GdEnrichement/100)*UEnrichement(g30fuelEnrichement)[3])}  %fuel
+ 8016.06c	-#{sprintf("%.5E",w_O[0]*(O*(1-g30GdEnrichement/100)+O_Gd*g30GdEnrichement/100))}  %fuel
+ 8017.06c	-#{sprintf("%.5E",w_O[1]*(O*(1-g30GdEnrichement/100)+O_Gd*g30GdEnrichement/100))}	 %fuel		
+64152.06c 	-#{sprintf("%.5E",w_Gd[0]*Gd*g30GdEnrichement/100)}	 %fuel
+64154.06c 	-#{sprintf("%.5E",w_Gd[1]*Gd*g30GdEnrichement/100)} %fuel
+64155.06c 	-#{sprintf("%.5E",w_Gd[2]*Gd*g30GdEnrichement/100)} %fuel
+64156.06c 	-#{sprintf("%.5E",w_Gd[3]*Gd*g30GdEnrichement/100)} %fuel
+64157.06c 	-#{sprintf("%.5E",w_Gd[4]*Gd*g30GdEnrichement/100)} %fuel
+64158.06c 	-#{sprintf("%.5E",w_Gd[5]*Gd*g30GdEnrichement/100)} %fuel
+64160.06c	-#{sprintf("%.5E",w_Gd[6]*Gd*g30GdEnrichement/100)} %fuel
 "
 
 g25inputDataFuel=
-"92234.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[0])} 
-92235.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[1])} 
-92236.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[2])} 
-92238.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[3])} 
- 8016.06c	-#{sprintf("%.5E",w_O[0]*(O*(1-g25GdEnrichement/100)+O_Gd*g25GdEnrichement/100))} 
- 8017.06c	-#{sprintf("%.5E",w_O[1]*(O*(1-g25GdEnrichement/100)+O_Gd*g25GdEnrichement/100))}			
-64152.06c 	-#{sprintf("%.5E",w_Gd[0]*Gd*g25GdEnrichement/100)}	
-64154.06c 	-#{sprintf("%.5E",w_Gd[1]*Gd*g25GdEnrichement/100)}
-64155.06c 	-#{sprintf("%.5E",w_Gd[2]*Gd*g25GdEnrichement/100)}
-64156.06c 	-#{sprintf("%.5E",w_Gd[3]*Gd*g25GdEnrichement/100)}
-64157.06c 	-#{sprintf("%.5E",w_Gd[4]*Gd*g25GdEnrichement/100)}
-64158.06c 	-#{sprintf("%.5E",w_Gd[5]*Gd*g25GdEnrichement/100)}
-64160.06c	-#{sprintf("%.5E",w_Gd[6]*Gd*g25GdEnrichement/100)}
+"92234.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[0])}  %fuel
+92235.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[1])}  %fuel
+92236.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[2])}  %fuel
+92238.06c	-#{sprintf("%.5E",U*(1-g25GdEnrichement/100)*UEnrichement(g25fuelEnrichement)[3])}  %fuel
+ 8016.06c	-#{sprintf("%.5E",w_O[0]*(O*(1-g25GdEnrichement/100)+O_Gd*g25GdEnrichement/100))}  %fuel
+ 8017.06c	-#{sprintf("%.5E",w_O[1]*(O*(1-g25GdEnrichement/100)+O_Gd*g25GdEnrichement/100))}	 %fuel		
+64152.06c 	-#{sprintf("%.5E",w_Gd[0]*Gd*g25GdEnrichement/100)}	 %fuel
+64154.06c 	-#{sprintf("%.5E",w_Gd[1]*Gd*g25GdEnrichement/100)} %fuel
+64155.06c 	-#{sprintf("%.5E",w_Gd[2]*Gd*g25GdEnrichement/100)} %fuel
+64156.06c 	-#{sprintf("%.5E",w_Gd[3]*Gd*g25GdEnrichement/100)} %fuel
+64157.06c 	-#{sprintf("%.5E",w_Gd[4]*Gd*g25GdEnrichement/100)} %fuel
+64158.06c 	-#{sprintf("%.5E",w_Gd[5]*Gd*g25GdEnrichement/100)} %fuel
+64160.06c	-#{sprintf("%.5E",w_Gd[6]*Gd*g25GdEnrichement/100)} %fuel
 "
 
 ModelDescription=
