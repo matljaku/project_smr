@@ -3,8 +3,8 @@ import numpy as np
 #Speed of wind (m/s)
 u = 3.6
 
-#Stack height (km)
-h_s = 0.010
+#Stack height (m)
+h_s = 10
 
 #Release temperature (°C)
 T_s = 300
@@ -26,9 +26,9 @@ IR = 2.5
 t_full = 120
 
 #Radius, where people are effected (km)
-r1 = 0.1
-r2 = 1
-r3 = 10
+r1 = 100
+r2 = 1e3
+r3 = 1e4
 
 #Data about Xe from SEALER-55 EoL inventory (core average burn-up: 60 GWd/ton)
 

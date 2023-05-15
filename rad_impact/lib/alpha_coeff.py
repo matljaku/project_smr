@@ -3,6 +3,8 @@ import transport as tr
 import parameters as p
 import pasquille as pas
 
+
+# h(r) [m]
 def distance_to_ground(r):
     return p.h_s + tr.h_plum(r)
 

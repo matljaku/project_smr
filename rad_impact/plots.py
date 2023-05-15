@@ -7,8 +7,11 @@ import parameters as p
 import transport as tr
 import alpha_coeff as al
 def plot_distance_to_ground(save):
-    r = np.linspace(0.01, 10, 10000)
+    r = np.linspace(0.1, 10, 10000)
     plt.plot(r, tr.h_plum(r), color='green', label='h_plum (km)')
+    #plt.axvline(x=100)
+    #plt.axvline(x=1e3)
+    #plt.axvline(x=1e4)
     plt.xlabel('distance (km)')
     plt.ylabel('plum height (km)')
     plt.title("h_plum")
@@ -47,11 +50,11 @@ def plot_pasquille_y(save):
     plt.show()
 def plot_gaussian_distribution(r, title, save):
     if r == p.r1:
-        lim = 0.4
+        lim = 400
     elif r == p.r2:
-        lim = 1
+        lim = 1e3
     else:
-        lim = 3.2
+        lim = 3.2e3
 
     t1 = np.linspace(0, lim, 10000)
     

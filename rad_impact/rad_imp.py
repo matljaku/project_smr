@@ -54,7 +54,7 @@ print(al.weather_cond_3(8))
 print(al.weather_cond_3(15))
 print("---")
 
-# Calculate time to distance for r1, r2, and r3
+# Calculate time to distance for r1, r2, and r3 [h]
 t_1 = tr.time_to_distance(p.r1, p.u)
 t_2 = tr.time_to_distance(p.r2, p.u)
 t_3 = tr.time_to_distance(p.r3, p.u)

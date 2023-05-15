@@ -1,5 +1,5 @@
 import parameters as p
-
+ # time t and half-lif time T is in [h]
 def decay_law(A_0, t, T):
     return A_0 * (1/2) ** (t / T)
 
@@ -42,10 +42,10 @@ def H_Xe(t):
 def H_volatiles(t, filter):
     return (A_Sr_90(t) * filter * p.E_sr + A_Te_132(t) * filter * p.E_te + A_I_131(t) * filter * p.E_I_1 + A_I_133(t) * filter * p.E_I_3 + A_Cs_137(t) * filter * p.E_Cs + A_Ba_140(t) * filter * p.E_Ba) * (1e15 * p.IR)
 
-def activity_release_rate(t):
+#def activity_release_rate(t):
     return A_Xe(t) / p.t_full
 
-def how_much_activity_remains(t):
+#def how_much_activity_remains(t):
     return A_Xe(t) - A_Xe(t) / p.t_full * t
 
 V_tot = p.IR * (p.t_full * 3600)
