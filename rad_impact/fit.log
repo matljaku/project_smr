@@ -1,0 +1,51 @@
+
+
+*******************************************************************************
+Tue May 16 00:43:26 2023
+
+
+FIT:    data read from "output.txt" u 1:2:3  yerror
+        format = x:z:s
+        #datapoints = 25
+function used for fitting: f(x)
+	f(x) = a*exp(b*x)
+fitted parameters initialized with current variable values
+
+
+Current data point
+=========================
+#               = 3 out of 25
+x               = 1              
+z               = 1.92967        
+
+Current set of parameters
+=========================
+a               = 1              
+b               = 1              
+
+BREAK: Undefined value during function evaluation
+
+*******************************************************************************
+Tue May 16 00:43:55 2023
+
+
+FIT:    data read from "output.txt" u 1:2:3  yerror
+        format = x:z:s
+        #datapoints = 25
+function used for fitting: f(x)
+	f(x) = a*exp(b*x)
+fitted parameters initialized with current variable values
+
+
+Current data point
+=========================
+#               = 3 out of 25
+x               = 1              
+z               = 1.92967        
+
+Current set of parameters
+=========================
+a               = 1              
+b               = 1              
+
+BREAK: Undefined value during function evaluation

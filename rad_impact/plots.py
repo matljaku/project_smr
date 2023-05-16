@@ -8,17 +8,15 @@ import transport as tr
 import alpha_coeff as al
 def plot_distance_to_ground(save):
     r = np.linspace(0.1, 10, 10000)
-    plt.plot(r, tr.h_plum(r), color='green', label='h_plum (km)')
-    #plt.axvline(x=100)
-    #plt.axvline(x=1e3)
-    #plt.axvline(x=1e4)
-    plt.xlabel('distance (km)')
-    plt.ylabel('plum height (km)')
-    plt.title("h_plum")
+    plt.plot(r, tr.h_plum(r), color='green', label='h_plum (m)')
+    plt.xlabel('distance (m)')
+    plt.ylabel('plum height (m)')
+    plt.title("Height of the plum")
     plt.legend(loc='upper right')
     plt.grid(True)
     plt.savefig(save)
     plt.show()
+    
 def plot_pasquille_z(save):
     r = np.linspace(0.1, 100, 10000)
     plt.plot(r, pas.sigma_A_z(r), color='green', label='Pasquill conditions A')
