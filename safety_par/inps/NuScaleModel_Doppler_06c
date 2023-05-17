@@ -5,12 +5,12 @@
 
 %-------MODEL DESCRIPTION---------
 
-u195 enriched to 1.95
-u205 enriched to 2.05
-u270 enriched to 2.7
-u360 enriched to 3.6
-g30 enriched to 1.5 and 3.0 of Gd2O3
-g25 enriched to 1.8 and 2.5 of Gd2O3
+u195 enriched to 2.95
+u205 enriched to 3.05
+u270 enriched to 3.7
+u360 enriched to 4.6
+g30 enriched to 2.5 and 3.0 of Gd2O3
+g25 enriched to 2.8 and 2.5 of Gd2O3
 
 %-----------------------------
 set title "NuScale 3D Core - Cycle 1"
@@ -147,9 +147,9 @@ Zrly4 0.47498
 waterSP_HTP
 
 % ===================================================================================
-
 surf assembly sqc 0.00 0.00 10.75 
 surf lattice sqc 0.00 0.00 10.71 
+
 % ---fuel array  name  LAT1
 lat LAT1_ 1 0 0 17 17 1.26 
  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
@@ -659,7 +659,7 @@ cell latplenSPTa PLENSPT fill PLENSPT_ -lattice
 cell latplenSPTb PLENSPT water lattice -assembly
 
 % ===================================================================================
-
+%----------------------------HERE CHANGED---------------------------------
 % Core arrays
 % ---fuel array
 lat core 1 0 0 7 7 21.5  %
@@ -902,64 +902,65 @@ cell outside2 0 outside top
 % % -- General proble data
 set bc 1 1 1 % all vacuum
 
+%The density is for UO2 96% TD
 % --- Material data
 % u195 fuel
-mat u195 -10.412 tmp 600 burn 1 %mat_temp
-92234.06c	-9.55780E-05 
-92235.06c	-1.71888E-02 
-92236.06c	-7.90686E-05 
-92238.06c	-8.64115E-01 
+mat u195 -10.55 tmp 600 burn 1 %mat_temp
+92234.06c	-1.49690E-04 
+92235.06c	-2.60036E-02 
+92236.06c	-1.19617E-04 
+92238.06c	-8.55205E-01 
  8016.06c	-1.18200E-01 
- 8017.06c	-4.78472E-05	 
+ 8017.06c	-4.78472E-05 	
 
 
 %div u195 sep 1 subr 2 0.0 0.405765  
 
 % u205 fuel
-mat u205 -10.412 tmp 600 burn 1 %mat_temp
-92234.06c	-1.00901E-04 
-92235.06c	-1.80703E-02 
-92236.06c	-8.31234E-05 
-92238.06c	-8.63224E-01 
+mat u205 -10.55 tmp 600 burn 1 %mat_temp
+92234.06c	-1.55197E-04 
+92235.06c	-2.68851E-02 
+92236.06c	-1.23671E-04 
+92238.06c	-8.54314E-01 
  8016.06c	-1.18200E-01 
- 8017.06c	-4.78472E-05	 
+ 8017.06c	-4.78472E-05 	
 
 
 %div u205 sep 1 subr 1 0.0 0.405765 
 
 % u27 fuel
-mat u27 -10.412 tmp 600 burn 1 %mat_temp
-92234.06c	-1.35993E-04 
-92235.06c	-2.37999E-02 
-92236.06c	-1.09480E-04 
-92238.06c	-8.57433E-01 
+mat u27 -10.55 tmp 600 burn 1 %mat_temp
+92234.06c	-1.91341E-04 
+92235.06c	-3.26147E-02 
+92236.06c	-1.50028E-04 
+92238.06c	-8.48522E-01 
  8016.06c	-1.18200E-01 
- 8017.06c	-4.78472E-05	 
+ 8017.06c	-4.78472E-05 	
 
 
 %div u27 sep 1 subr 1 0.0 0.405765 
 
 % u36 fuel
-mat u36 -10.412 tmp 600 burn 1 %mat_temp
-92234.06c	-1.85743E-04 
-92235.06c	-3.17332E-02 
-92236.06c	-1.45973E-04 
-92238.06c	-8.49413E-01 
+mat u36 -10.55 tmp 600 burn 1 %mat_temp
+92234.06c	-2.42258E-04 
+92235.06c	-4.05480E-02 
+92236.06c	-1.86521E-04 
+92238.06c	-8.40502E-01 
  8016.06c	-1.18200E-01 
- 8017.06c	-4.78472E-05	 
+ 8017.06c	-4.78472E-05 
 
 
 %div u36 sep 1 subr 1 0.0 0.405765 
 
 % g30 fuel
-mat g30 -10.322 tmp 600 vol 3308 burn 1 %mat_temp
-92234.06c	-6.97669E-05  
-92235.06c	-1.28255E-02  
-92236.06c	-5.89973E-05  
-92238.06c	-8.42080E-01  
- 8016.06c	-1.18616E-01  
- 8017.06c	-4.80154E-05	 		
-64152.06c 	-5.02908E-05	 
+mat g30 -10.45 tmp 600 vol 3308 burn 1 %mat_temp
+92234.06c	-1.21358E-04 
+92235.06c	-2.13759E-02 
+92236.06c	-9.83289E-05 
+92238.06c	-8.33438E-01 
+ 8016.06c	-1.18616E-01 
+ 8017.06c	-4.80154E-05 			
+64152.06c 	-5.02908E-05 	
 64154.06c 	-5.55386E-04 
 64155.06c 	-3.79505E-03 
 64156.06c 	-5.28282E-03 
@@ -971,14 +972,14 @@ mat g30 -10.322 tmp 600 vol 3308 burn 1 %mat_temp
 %div g30 sep 1 subr 1 0.0 0.405765 
 
 % g25 fuel
-mat g25 -10.322 tmp 600 vol 6617 burn 1 %mat_temp
-92234.06c	-8.54458E-05  
-92235.06c	-1.54699E-02  
-92236.06c	-7.11618E-05  
-92238.06c	-8.43815E-01  
- 8016.06c	-1.18547E-01  
- 8017.06c	-4.79873E-05	 		
-64152.06c 	-4.19090E-05	 
+mat g25 -10.45 tmp 600 vol 6617 burn 1 %mat_temp
+92234.06c	-1.37923E-04 
+92235.06c	-2.40644E-02 
+92236.06c	-1.10696E-04 
+92238.06c	-8.35128E-01 
+ 8016.06c	-1.18547E-01 
+ 8017.06c	-4.79873E-05 			
+64152.06c 	-4.19090E-05 	
 64154.06c 	-4.62821E-04 
 64155.06c 	-3.16254E-03 
 64156.06c 	-4.40235E-03 
@@ -1066,59 +1067,11 @@ mat boron   1.00000  tmp 531.5
  5010.03c   0.19900
  5011.03c   0.80100
 
-% ---- Water + 1278 ppm boron:
+% ---- Water + 1000 ppm boron (critical for BoL BU=0):
 mix water
-clear_water      -0.998722
-boron      -1278E-6
-
-% ---- Water + 0 ppm boron:
-mix water_0B
-clear_water      -1.00000
-
-% ---- Water + 450 ppm boron:
-mix water_450B
-clear_water      -0.99955
-boron      -450E-6
-
-% ---- Water + 750 ppm boron:
-mix water_750B
-clear_water      -0.99925
-boron      -750E-6
-
-% ---- Water + 1000 ppm boron:
-mix water_1000B
-water      -0.99900
+clear_water      -0.99900
 boron      -1000E-6
 
-branch HIS
-var BHI 1278
-
-% --nominal brnch
-branch nom
-
-% --- Branch B0
-branch B0   
-repm water water_0B
-var BOR 0  
-
-% --- Branch B450
-branch B450   
-repm water water_450B
-var BOR 450  
-
-% --- Branch B750
-branch B750   
-repm water water_750B
-var BOR 750  
-
-% --- Branch B1000
-branch B1000  
-repm water water_1000B
-var BOR 1000
-
-coef 12 0 0.1 1 3 5 10 15 20 30 40 50 55
-5 nom B0 B450 B750 B1000 
-1 HIS 
 %--------------------------------------
 mat inc -8.0 tmp 600 
 14028.06c 4.390239804532583E-03 
@@ -1190,7 +1143,8 @@ set nfylib "/codes/SERPENT/xsdata/sss_jeff311.nfy"
 % plot 3 3000 3000 100 -10.75 10.75 10.75 -10.75 %FA without Gd
 
 % --- neutron histories
-set pop 25000 1000 200
+%set pop 25000 1000 200
+set pop 7000 500 100
 
 %set iter nuc 40 1.0 2 50100 50110 5 water LowNozMat UppNozMat waterSP_HMP waterSP_HTP
 
@@ -1198,44 +1152,13 @@ set pop 25000 1000 200
 %set egrid 5e-4 1e-10 20
 %set fpcut 2E-4
 
-set mcvol 200000
+set mcvol 2000000
 
 %Electrical power is supposed to be 100MW (we will scale the thermal power the same way as for NuScale 8/3 -> thermal power is 270 MWt)
 set power 270000000
 
 %Burnup in MWd/kg
-dep butot 0.1 1 3 5 10 15 20 30 40 50 55
-
+%dep butot 0.1 1 3 5 10 15 20 30 40 50 55
+dep butot 11 21
 
 set pcc LELI %linear extrapolation for predictor, linear interpolation for corrector
-
-% --- Detectors to collect proper data
-%
-%det _assemblies_ dr -8 void dx -75.25 75.25 7  dy -75.25 75.25 7
-%
-%det _PinsD4_ dr -8 void dx -10.75 10.75 17 dy -10.75 10.75 17
-%det _PinsD5_ dr -8 void dx  10.75 32.25 17 dy -10.75 10.75 17
-%det _PinsD6_ dr -8 void dx  32.25 53.75 17 dy -10.75 10.75 17
-%det _PinsD7_ dr -8 void dx  53.75 75.25 17 dy -10.75 10.75 17
-%
-%det _PinsC4_ dr -8 void dx -10.75 10.75 17 dy 10.75 32.25 17
-%det _PinsC5_ dr -8 void dx  10.75 32.25 17 dy 10.75 32.25 17
-%det _PinsC6_ dr -8 void dx  32.25 53.75 17 dy 10.75 32.25 17
-%det _PinsC7_ dr -8 void dx  53.75 75.25 17 dy 10.75 32.25 17
-%
-%det _PinsB4_ dr -8 void dx -10.75 10.75 17 dy 32.25 53.75 17
-%det _PinsB5_ dr -8 void dx  10.75 32.25 17 dy 32.25 53.75 17
-%det _PinsB6_ dr -8 void dx  32.25 53.75 17 dy 32.25 53.75 17
-%
-%det _PinsA4_ dr -8 void dx -10.75 10.75 17 dy 53.75 75.25 17
-%det _PinsA5_ dr -8 void dx  10.75 32.25 17 dy 53.75 75.25 17
-                        
-
-%  G  X  X  F  F  F  X  X 
-%  F  X  F  F  F  F  F  X 
-%  E  F  F  F  F  F  F  F
-%  D  F  F  F  F  F  F  F
-%  C  F  F  F  F  F  F  F 
-%  B  X  F  F  F  F  F  X 
-%  A  X  X  F  F  F  X  X
-%     1  2  3  4  5  6  7

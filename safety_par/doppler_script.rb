@@ -3,7 +3,7 @@ temp.each do |lib|
     temp_val = lib.split("c")[0].to_i*100
     main_name = "NuScaleModel_Doppler_#{lib}"
     File.open("./inps/#{main_name}", "w") do |w|
-            File.foreach("./01_MODEL") do |l|
+            File.foreach("./07_MODEL_mod") do |l|
                 if l.include?("%fuel")
                     l = l.gsub("06c", lib).gsub("%fuel", "")
                     w.puts l

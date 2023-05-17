@@ -1,0 +1,18 @@
+
+    set term pdf font 'CMU serif, 10' size 10cm, 9cm
+    set output 'b_c_25.00.pdf'
+    set fit errorvariables
+    set xlabel 'boron concentration (ppm)'
+    set ylabel '{/Symbol r} (pcm)'
+
+    
+    set errorbars linecolor black
+    set bars front
+    
+    f(x) = a*x + b
+    
+    fit f(x) 'b_c_25.00' u 1:2:3  yerror via a, b
+    d = -b/a
+    d_error = sqrt((a_err)**2 + (b_err)**2)
+    plot 'b_c_25.00' u 1:2:3 with yerror pt 7 ps 0.4 lc 6 title 'b_c_25.00',        f(x) lc 8 title sprintf('bc_crit = %d +- %f', d, d_error) 
+    
