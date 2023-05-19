@@ -1,7 +1,7 @@
 import numpy as np
 
 #Speed of wind (m/s)
-u = 3.6
+u = 1
 
 #Stack height (m)
 h_s = 10
@@ -33,14 +33,14 @@ r3 = 1e4
 #Data about Xe from SEALER-55 EoL inventory (core average burn-up: 60 GWd/ton)
 
 #Xe-133
-m_3 = 41.1 #g
-A_3 = 285 #PBq
+m_3 = 78.4 #g
+A_3 = 543.5 #PBq
 T_3 = 120 #h
 E_3 = 0.1e-6/24 #mSv/h/(Bq/m3)
 
 #Xe-135
-m_5 = 3.1 #g
-A_5 = 289 #PBq
+m_5 = 2.1 #g
+A_5 = 194.7 #PBq
 T_5 = 9   #h
 E_5 = 1e-6/24   #mSv/h/(Bq/m3)
 
@@ -61,15 +61,15 @@ E_te = 3*1e-6 #[mSv/Bq]
 
 """
 #I_131
-m_I_1 = 31.1 #[g]
-A_I_1 = 143 #[PBq]
+m_I_1 = 57.1 #[g]
+A_I_1 = 262.8 #[PBq]
 T_I_1 = 8*24 #[h]
 E_I_1 = 20*1e-6 #[mSv/Bq]
 
 
 #I_133
-m_I_3 = 6.7 #[g]
-A_I_3 = 281 #[PBq]
+m_I_3 = 13 #[g]
+A_I_3 = 543.2 #[PBq]
 T_I_3 = 21 #[h]
 E_I_3 = 4*1e-6 #[mSv/Bq]
 

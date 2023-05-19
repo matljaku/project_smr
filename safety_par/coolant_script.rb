@@ -21,7 +21,7 @@ temp.each_with_index do |t, i|
                 end
             
         end
-        #system("sss2 ./inps/#{main_name} -omp 5")
-        #system("mv ./inps/#{main_name}_res.m ./res/")
+        system("sss2 ./inps/#{main_name} -omp 5")
+        system("mv ./inps/#{main_name}_res.m ./res/")
     
 end

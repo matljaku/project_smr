@@ -41,7 +41,7 @@ def dose_at_point_3_over_time_volatile(time):
 
 
 """
-
+print(al.distance_to_ground(10))
 def dose_at_any_point_over_time(time, r):
     return al.weather_cond_any(time, r) * a.H_Xe(time)
 
@@ -121,14 +121,23 @@ def h_volatiles_any(r):
 # Create a the radius interval
 # Do not overcome the number of points, it will take a few seconds to 
 # calculate
-emergency_radius = np.linspace(100, 1e4, 100)
+emergency_radius = np.linspace(100, 3000, 250)
 
 # Create an array of dose equivalents
 total_dose_Xe = [h_Xe_any(rin) for rin in emergency_radius]
 total_dose_Xe_values = [dose[0] for dose in total_dose_Xe]
-errors = [dose[1] for dose in total_dose_Xe]
+errors_xe = [dose[1] for dose in total_dose_Xe]
+total_dose_volatiles = [h_volatiles_any(rin) for rin in emergency_radius]
+total_dose_volatiles_values = [dose[0] for dose in total_dose_volatiles]
+errors_volatiles = [dose[1] for dose in total_dose_volatiles]
 
 
+total_dose = np.add(total_dose_volatiles_values,total_dose_Xe_values)
+errors_total = np.add(errors_volatiles, errors_xe)
+
+#print(total_dose_volatiles)
+#print(total_dose_volatiles_values)
+print(total_dose)
 # FInd the minimum radius
 dose_limit = 20 #[mSv]
 
@@ -136,7 +145,7 @@ dose_limit = 20 #[mSv]
 
 closest_difference = float('inf')
 closest_x = None
-for x, y in zip(emergency_radius, total_dose_Xe_values):
+for x, y in zip(emergency_radius, total_dose):
     difference = abs(y - dose_limit)
     if difference < closest_difference:
         closest_difference = difference
@@ -149,7 +158,7 @@ print("Minimum emergency zone radius for 20 mSv is:", r_min)
 # Plot the exposure
 
 fig, ax = plt.subplots()
-ax.plot(emergency_radius, total_dose_Xe_values, color='red', label='Dose equivalent')
+ax.plot(emergency_radius, total_dose, color='red', label='Dose equivalent')
 plt.axvline(x=r_min, color='r', linestyle='--')
 plt.axvline(x=10*r_min, color='g', linestyle='--')
 
@@ -162,7 +171,7 @@ plt.savefig("./fig/dose_equivalent.png")
 plt.show()
 
 # Export the data to a text file
-data = np.column_stack((emergency_radius, total_dose_Xe_values, errors))
+data = np.column_stack((emergency_radius, total_dose, errors_total))
 np.savetxt('output.txt', data, delimiter='\t', comments='')
 
 
