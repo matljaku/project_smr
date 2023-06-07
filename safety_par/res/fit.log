@@ -19140,3 +19140,660 @@ correlation matrix of the fit parameters:
 a_eol           1.000 
 b_eol          -1.000  1.000 
 c_eol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_doppler" u 1:2:3 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.3619288284e+05   0.00e+00  3.05e+01    1.000000e+00   1.000000e+00
+   7 3.9509683890e+00  -4.59e-03  3.05e-06   -1.793570e+00   1.372470e+04
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 3.95097
+rel. change during last iteration : -4.59383e-08
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.1476
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31699
+p-value of the Chisq distribution (FIT_P)              : 0.266808
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.79357         +/- 0.0359       (2.002%)
+b               = 13724.7          +/- 45.39        (0.3307%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.943  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_doppler" u 1:4:5 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.9637702665e+05   0.00e+00  2.75e+02   -1.793570e+00   1.372470e+04
+   4 1.0646871523e+01  -2.42e-01  2.75e-02   -1.801126e+00   1.378527e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 10.6469
+rel. change during last iteration : -2.41865e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.88387
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.54896
+p-value of the Chisq distribution (FIT_P)              : 0.013797
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.80113         +/- 0.07029      (3.903%)
+b               = 1378.53          +/- 87.26        (6.33%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.938  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_doppler" u 1:6:7 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.1305121868e+05   0.00e+00  4.67e+01   -1.801126e+00   1.378527e+03
+   4 3.8289535308e-01  -9.05e-01  4.67e-03   -1.084645e+00  -7.666266e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.382895
+rel. change during last iteration : -9.05287e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.357256
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.127632
+p-value of the Chisq distribution (FIT_P)              : 0.943753
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.08465         +/- 0.01512      (1.394%)
+b               = -7666.27         +/- 18.77        (0.2448%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.941  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_coolant" u 1:2:3
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_bol*x**2 + b_bol*x + c_bol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_bol         b_bol         c_bol        
+   0 5.5695002331e+08   0.00e+00  6.32e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 1.1956297882e+00  -6.00e-01  6.32e-08   -2.104076e-01   2.167866e+02  -4.305137e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 1.19563
+rel. change during last iteration : -6.00143e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.773185
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.597815
+p-value of the Chisq distribution (FIT_P)              : 0.550012
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bol           = -0.210408        +/- 0.01927      (9.156%)
+b_bol           = 216.787          +/- 21.84        (10.08%)
+c_bol           = -43051.4         +/- 6182         (14.36%)
+
+correlation matrix of the fit parameters:
+                a_bol  b_bol  c_bol  
+a_bol           1.000 
+b_bol          -1.000  1.000 
+c_bol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_coolant" u 1:4:5
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_mol*x**2 + b_mol*x + c_mol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_mol         b_mol         c_mol        
+   0 4.0141861911e+08   0.00e+00  5.16e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 3.4997891667e+00  -4.83e-01  5.16e-08   -2.884857e-01   2.978724e+02  -7.642003e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 3.49979
+rel. change during last iteration : -4.83165e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.32284
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.74989
+p-value of the Chisq distribution (FIT_P)              : 0.173792
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_mol           = -0.288486        +/- 0.04136      (14.34%)
+b_mol           = 297.872          +/- 46.84        (15.73%)
+c_mol           = -76420           +/- 1.324e+04    (17.33%)
+
+correlation matrix of the fit parameters:
+                a_mol  b_mol  c_mol  
+a_mol           1.000 
+b_mol          -1.000  1.000 
+c_mol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:22:58 2023
+
+
+FIT:    data read from "rho_coolant" u 1:6:7
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_eol*x**2 + b_eol*x + c_eol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_eol         b_eol         c_eol        
+   0 3.2594839174e+08   0.00e+00  4.53e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  12 8.4115282935e-01  -8.63e-08  4.53e-09   -2.701987e-01   2.830358e+02  -8.222145e+04
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.841153
+rel. change during last iteration : -8.63071e-13
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.648519
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.420576
+p-value of the Chisq distribution (FIT_P)              : 0.656668
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_eol           = -0.270199        +/- 0.02256      (8.349%)
+b_eol           = 283.036          +/- 25.57        (9.035%)
+c_eol           = -82221.5         +/- 7236         (8.801%)
+
+correlation matrix of the fit parameters:
+                a_eol  b_eol  c_eol  
+a_eol           1.000 
+b_eol          -1.000  1.000 
+c_eol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_doppler" u 1:2:3 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.3619288284e+05   0.00e+00  3.05e+01    1.000000e+00   1.000000e+00
+   7 3.9509683890e+00  -4.59e-03  3.05e-06   -1.793570e+00   1.372470e+04
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 3.95097
+rel. change during last iteration : -4.59383e-08
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.1476
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31699
+p-value of the Chisq distribution (FIT_P)              : 0.266808
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.79357         +/- 0.0359       (2.002%)
+b               = 13724.7          +/- 45.39        (0.3307%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.943  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_doppler" u 1:4:5 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.9637702665e+05   0.00e+00  2.75e+02   -1.793570e+00   1.372470e+04
+   4 1.0646871523e+01  -2.42e-01  2.75e-02   -1.801126e+00   1.378527e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 10.6469
+rel. change during last iteration : -2.41865e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.88387
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.54896
+p-value of the Chisq distribution (FIT_P)              : 0.013797
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.80113         +/- 0.07029      (3.903%)
+b               = 1378.53          +/- 87.26        (6.33%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.938  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_doppler" u 1:6:7 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.1305121868e+05   0.00e+00  4.67e+01   -1.801126e+00   1.378527e+03
+   4 3.8289535308e-01  -9.05e-01  4.67e-03   -1.084645e+00  -7.666266e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.382895
+rel. change during last iteration : -9.05287e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.357256
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.127632
+p-value of the Chisq distribution (FIT_P)              : 0.943753
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.08465         +/- 0.01512      (1.394%)
+b               = -7666.27         +/- 18.77        (0.2448%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.941  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_coolant" u 1:2:3
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_bol*x**2 + b_bol*x + c_bol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_bol         b_bol         c_bol        
+   0 5.5695002331e+08   0.00e+00  6.32e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 1.1956297882e+00  -6.00e-01  6.32e-08   -2.104076e-01   2.167866e+02  -4.305137e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 1.19563
+rel. change during last iteration : -6.00143e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.773185
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.597815
+p-value of the Chisq distribution (FIT_P)              : 0.550012
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bol           = -0.210408        +/- 0.01927      (9.156%)
+b_bol           = 216.787          +/- 21.84        (10.08%)
+c_bol           = -43051.4         +/- 6182         (14.36%)
+
+correlation matrix of the fit parameters:
+                a_bol  b_bol  c_bol  
+a_bol           1.000 
+b_bol          -1.000  1.000 
+c_bol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_coolant" u 1:4:5
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_mol*x**2 + b_mol*x + c_mol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_mol         b_mol         c_mol        
+   0 4.0141861911e+08   0.00e+00  5.16e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 3.4997891667e+00  -4.83e-01  5.16e-08   -2.884857e-01   2.978724e+02  -7.642003e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 3.49979
+rel. change during last iteration : -4.83165e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.32284
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.74989
+p-value of the Chisq distribution (FIT_P)              : 0.173792
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_mol           = -0.288486        +/- 0.04136      (14.34%)
+b_mol           = 297.872          +/- 46.84        (15.73%)
+c_mol           = -76420           +/- 1.324e+04    (17.33%)
+
+correlation matrix of the fit parameters:
+                a_mol  b_mol  c_mol  
+a_mol           1.000 
+b_mol          -1.000  1.000 
+c_mol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:23:29 2023
+
+
+FIT:    data read from "rho_coolant" u 1:6:7
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_eol*x**2 + b_eol*x + c_eol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_eol         b_eol         c_eol        
+   0 3.2594839174e+08   0.00e+00  4.53e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  12 8.4115282935e-01  -8.63e-08  4.53e-09   -2.701987e-01   2.830358e+02  -8.222145e+04
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.841153
+rel. change during last iteration : -8.63071e-13
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.648519
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.420576
+p-value of the Chisq distribution (FIT_P)              : 0.656668
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_eol           = -0.270199        +/- 0.02256      (8.349%)
+b_eol           = 283.036          +/- 25.57        (9.035%)
+c_eol           = -82221.5         +/- 7236         (8.801%)
+
+correlation matrix of the fit parameters:
+                a_eol  b_eol  c_eol  
+a_eol           1.000 
+b_eol          -1.000  1.000 
+c_eol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_doppler" u 1:2:3 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.3619288284e+05   0.00e+00  3.05e+01    1.000000e+00   1.000000e+00
+   7 3.9509683890e+00  -4.59e-03  3.05e-06   -1.793570e+00   1.372470e+04
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 3.95097
+rel. change during last iteration : -4.59383e-08
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.1476
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31699
+p-value of the Chisq distribution (FIT_P)              : 0.266808
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.79357         +/- 0.0359       (2.002%)
+b               = 13724.7          +/- 45.39        (0.3307%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.943  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_doppler" u 1:4:5 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.9637702665e+05   0.00e+00  2.75e+02   -1.793570e+00   1.372470e+04
+   4 1.0646871523e+01  -2.42e-01  2.75e-02   -1.801126e+00   1.378527e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 10.6469
+rel. change during last iteration : -2.41865e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.88387
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.54896
+p-value of the Chisq distribution (FIT_P)              : 0.013797
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.80113         +/- 0.07029      (3.903%)
+b               = 1378.53          +/- 87.26        (6.33%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.938  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_doppler" u 1:6:7 yerror
+        format = x:z:s
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.1305121868e+05   0.00e+00  4.67e+01   -1.801126e+00   1.378527e+03
+   4 3.8289535308e-01  -9.05e-01  4.67e-03   -1.084645e+00  -7.666266e+03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.382895
+rel. change during last iteration : -9.05287e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.357256
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.127632
+p-value of the Chisq distribution (FIT_P)              : 0.943753
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.08465         +/- 0.01512      (1.394%)
+b               = -7666.27         +/- 18.77        (0.2448%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.941  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_coolant" u 1:2:3
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_bol*x**2 + b_bol*x + c_bol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_bol         b_bol         c_bol        
+   0 5.5695002331e+08   0.00e+00  6.32e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 1.1956297882e+00  -6.00e-01  6.32e-08   -2.104076e-01   2.167866e+02  -4.305137e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 1.19563
+rel. change during last iteration : -6.00143e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.773185
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.597815
+p-value of the Chisq distribution (FIT_P)              : 0.550012
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_bol           = -0.210408        +/- 0.01927      (9.156%)
+b_bol           = 216.787          +/- 21.84        (10.08%)
+c_bol           = -43051.4         +/- 6182         (14.36%)
+
+correlation matrix of the fit parameters:
+                a_bol  b_bol  c_bol  
+a_bol           1.000 
+b_bol          -1.000  1.000 
+c_bol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_coolant" u 1:4:5
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_mol*x**2 + b_mol*x + c_mol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_mol         b_mol         c_mol        
+   0 4.0141861911e+08   0.00e+00  5.16e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  11 3.4997891667e+00  -4.83e-01  5.16e-08   -2.884857e-01   2.978724e+02  -7.642003e+04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 3.49979
+rel. change during last iteration : -4.83165e-06
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.32284
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.74989
+p-value of the Chisq distribution (FIT_P)              : 0.173792
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_mol           = -0.288486        +/- 0.04136      (14.34%)
+b_mol           = 297.872          +/- 46.84        (15.73%)
+c_mol           = -76420           +/- 1.324e+04    (17.33%)
+
+correlation matrix of the fit parameters:
+                a_mol  b_mol  c_mol  
+a_mol           1.000 
+b_mol          -1.000  1.000 
+c_mol           0.999 -1.000  1.000 
+
+
+*******************************************************************************
+Thu May 25 11:26:59 2023
+
+
+FIT:    data read from "rho_coolant" u 1:6:7
+        format = x:z:s
+        x range restricted to [531.400 : 602.400]
+        #datapoints = 5
+function used for fitting: f(x)
+	f(x) = a_eol*x**2 + b_eol*x + c_eol
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a_eol         b_eol         c_eol        
+   0 3.2594839174e+08   0.00e+00  4.53e+03    1.000000e+00   1.000000e+00   1.000000e+00
+  12 8.4115282935e-01  -8.63e-08  4.53e-09   -2.701987e-01   2.830358e+02  -8.222145e+04
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.841153
+rel. change during last iteration : -8.63071e-13
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.648519
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.420576
+p-value of the Chisq distribution (FIT_P)              : 0.656668
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a_eol           = -0.270199        +/- 0.02256      (8.349%)
+b_eol           = 283.036          +/- 25.57        (9.035%)
+c_eol           = -82221.5         +/- 7236         (8.801%)
+
+correlation matrix of the fit parameters:
+                a_eol  b_eol  c_eol  
+a_eol           1.000 
+b_eol          -1.000  1.000 
+c_eol           0.999 -1.000  1.000 

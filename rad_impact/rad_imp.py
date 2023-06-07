@@ -92,10 +92,12 @@ dose_r2_t_int = [dose_at_point_2_over_time(tin) for tin in t_int]
 fig, ax = plt.subplots()
 ax.plot(t, dose_r2_t, color='red', label='Dose equivalent rate')
 ax.fill_between(t_int, dose_r2_t_int, alpha=0.2)
-ax.set_xlabel('time (h)')
-ax.set_ylabel('H (mSv/h)')
-ax.set_title("Dose equivalent rate over time at r2")
-ax.legend(loc='upper right')
+plt.xticks(fontsize=15)  # Set font size to 12 for X-axis tick labels
+plt.yticks(fontsize=15)  # Set font size to 12 for Y-axis tick labels
+ax.set_xlabel('time (h)', fontsize=15)
+ax.set_ylabel('H (mSv/h)', fontsize=15)
+ax.set_title("Dose equivalent rate over time at r2", fontsize=15)
+ax.legend(loc='upper right', fontsize=15)
 ax.grid(True)
 plt.savefig("./fig/dose_equivalent_rate_r2")
 plt.show()

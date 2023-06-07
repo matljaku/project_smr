@@ -1,4 +1,4 @@
-set term pdf font "CMU serif, 10" size 10cm, 9cm
+set term pdf font "CMU serif, 14" size 10cm, 9cm
 set output "./fig/ExposureLog.pdf"
 set ylabel "H (mSv)"
 set xlabel "distance (km)"
@@ -21,12 +21,12 @@ do for [i=1:|arrow_positions|] {
 
 
 
-plot "output.txt" u ($1*1e-3):2 w lp pt 7 ps 0.3 lc 6 title "Dose equivalent"
+plot "output.txt" u ($1*1e-3):2 w lp pt 7 ps 0.8 lc 6 title "Dose equivalent"
 
 
 
 reset
-set term pdf font "CMU serif, 10" size 10cm, 9cm
+set term pdf font "CMU serif, 14" size 10cm, 9cm
 set output "./fig/Exposure.pdf"
 set ylabel "H (mSv)"
 set xlabel "distance (km)"
@@ -48,4 +48,4 @@ do for [i=1:|arrow_positions|] {
 }
 
 
-plot "output.txt" u ($1*1e-3):2 w lp pt 7 ps 0.3 lc 6 title "Dose equivalent"
+plot "output.txt" u ($1*1e-3):2 w lp pt 7 ps 0.8 lc 6 title "Dose equivalent"
